@@ -34,8 +34,8 @@ services:
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     # ディレクトリの同期をしています。ここを書かないとコンテナを閉じたときにデータベースからデータがなくなるので注意してください。詳しくはdocker 永続化などと調べると良いかもです。
     volumes:
-      - ./Docker/infra/DB/volume:/var/lib/mysql
-      - ./Docker/infra/DB/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./infra/DB/volume:/var/lib/mysql
+      - ./infra/DB/my.cnf:/etc/mysql/conf.d/my.cnf
     # ホストの13306番ポートとコンテナのなかの3306番ポートとつなげる設定です。
     ports:
       - 13306:3306
