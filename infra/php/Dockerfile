@@ -15,3 +15,5 @@ RUN apt-get update && \
 COPY ./php.ini /usr/local/etc/php/php.ini
 
 WORKDIR /work
+
+RUN apt update && apt-get -y install nodejs npm
