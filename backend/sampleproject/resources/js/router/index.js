@@ -4,6 +4,8 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 import Home from '../pages/HomeComponent.vue'
+import about from '../pages/about.vue'
+import notFound from '../pages/401.vue'
 // import CategoryList from '../pages/category/index.vue'
 // import CreateCategory from '../pages/category/create.vue'
 // import EditCategory from '../pages/category/edit.vue'
@@ -26,6 +28,16 @@ const routes = new VueRouter({
       path: '/',
       component: Home,
       name:'home',
+    },
+    {
+      path: '/about',
+      component: about,
+      name:'about',
+    },
+    {
+      path: '*',
+      component: notFound,
+      name:'401',
     },
     // {
     //   path: '/category',

@@ -9,6 +9,7 @@
       <v-toolbar-title 
         class="display-1" 
         style="cursor: pointer" 
+        @click="$router.push({ name: 'home' })"
         >
         Site Logo
         </v-toolbar-title>
@@ -19,8 +20,16 @@
       <v-toolbar-title 
         class="ml-5"
         style="cursor: pointer" 
+        @click="$router.push({ name: 'home' })"
         >
         Home
+        </v-toolbar-title>
+      <v-toolbar-title 
+        class="ml-5"
+        style="cursor: pointer" 
+        @click="$router.push({ name: 'about' })"
+        >
+        about
         </v-toolbar-title>
       <!-- <v-toolbar-title 
         class="ml-5"
