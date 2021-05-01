@@ -30,6 +30,7 @@ const routes = new VueRouter({
       path: '/',
       component: Home,
       name:'home',
+      meta: { authOnly: true }
     },
     {
       path: '/about',
@@ -40,11 +41,13 @@ const routes = new VueRouter({
       path: '/login',
       component: login,
       name:'login',
+      meta: { guestOnly: true }
     },
     {
       path: '/register',
       component: register,
       name:'register',
+      meta: { guestOnly: true }
     },
     {
       path: '*',
@@ -98,5 +101,28 @@ const routes = new VueRouter({
     // },
   ]
 })
+
+function isLoggedIn() {
+  return localStorage.getItem("auth");
+}
+
+routes.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.authOnly)) {
+      if (!isLoggedIn()) {
+          next("/login");
+      } else {
+          next();
+      }
+  } else if (to.matched.some(record => record.meta.guestOnly)) {
+      if (isLoggedIn()) {
+          next("/");
+      } else {
+          next();
+      }
+  } else {
+      next();
+  }
+});
+
 
 export default routes;
