@@ -31,6 +31,20 @@
         >
         about
         </v-toolbar-title>
+      <v-toolbar-title 
+        class="ml-5"
+        style="cursor: pointer" 
+        @click="$router.push({ name: 'login' })"
+        >
+        login
+        </v-toolbar-title>
+      <v-toolbar-title 
+        class="ml-5"
+        style="cursor: pointer" 
+        @click="$router.push({ name: 'register' })"
+        >
+        register
+        </v-toolbar-title>
       <!-- <v-toolbar-title 
         class="ml-5"
         style="cursor: pointer" 
