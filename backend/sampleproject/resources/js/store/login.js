@@ -68,12 +68,12 @@ const actions = {
     })
   },
   logout({commit}) {
-    axios.post('/logout')
+    axios.post('/api/logout')
     .then(res => {
       localStorage.removeItem("auth");
       commit('setUser', null);
       commit('SET_IS_AUTH', false);
-      router.push("/auth/login");
+      router.push("/login");
     })
   },
 }

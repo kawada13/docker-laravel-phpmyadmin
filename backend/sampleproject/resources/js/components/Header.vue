@@ -45,6 +45,13 @@
         >
         register
         </v-toolbar-title>
+      <v-toolbar-title 
+        class="ml-5"
+        style="cursor: pointer" 
+        @click="logout()"
+        >
+        logout
+        </v-toolbar-title>
       <!-- <v-toolbar-title 
         class="ml-5"
         style="cursor: pointer" 
@@ -116,12 +123,14 @@
   </div>
 </template>
 <script>
+import { mapState, mapActions } from "vuex"
 export default {
   methods:{
     logout() {
       console.log('ログアウト');
+      this.$store.dispatch('login/logout')
     }
-  }
+  },
 }
 </script>
 
