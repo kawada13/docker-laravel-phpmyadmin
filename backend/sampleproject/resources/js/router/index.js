@@ -8,7 +8,7 @@ import about from '../pages/about.vue'
 import notFound from '../pages/401.vue'
 import login from '../pages/login.vue'
 import register from '../pages/register.vue'
-// import CategoryList from '../pages/category/index.vue'
+import CategoryList from '../pages/category/index.vue'
 // import CreateCategory from '../pages/category/create.vue'
 // import EditCategory from '../pages/category/edit.vue'
 
@@ -48,6 +48,11 @@ const routes = new VueRouter({
       component: register,
       name:'register',
       meta: { guestOnly: true }
+    },
+    {
+      path: '/category',
+      component: CategoryList,
+      name:'category-list',
     },
     {
       path: '*',
