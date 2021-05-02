@@ -9,7 +9,7 @@ import notFound from '../pages/401.vue'
 import login from '../pages/login.vue'
 import register from '../pages/register.vue'
 import CategoryList from '../pages/category/index.vue'
-// import CreateCategory from '../pages/category/create.vue'
+import CreateCategory from '../pages/category/create.vue'
 // import EditCategory from '../pages/category/edit.vue'
 
 // import ProductList from '../pages/product/index.vue'
@@ -53,6 +53,11 @@ const routes = new VueRouter({
       path: '/category',
       component: CategoryList,
       name:'category-list',
+    },
+    {
+      path: '/category/create',
+      component: CreateCategory,
+      name:'create-category',
     },
     {
       path: '*',

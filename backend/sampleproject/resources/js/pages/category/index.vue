@@ -103,4 +103,5 @@ import { mapState, mapActions } from "vuex"
       this.loading = false
     }
    }
+   
 </script>
