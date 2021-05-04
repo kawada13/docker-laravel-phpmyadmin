@@ -36,4 +36,5 @@ class CategoryTest extends TestCase
             ->assertStatus(200)
             ->assertJson(['message' => '成功']);
     }
+    
 }
