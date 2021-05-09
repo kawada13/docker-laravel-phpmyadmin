@@ -4,9 +4,11 @@ import Vuetify from './plugins/vuetify' // vuetify.jsを読み込み
 import routes from './router/index'
 import store from './store' 
 
+
 import ExampleComponent from './components/ExampleComponent.vue'
 
 Vue.component('app-header', require('./components/Header.vue').default);
+Vue.component('AudioPlayer', require('./components/audio-player.vue').default);
 
 const app = new Vue({
     el: '#app',
