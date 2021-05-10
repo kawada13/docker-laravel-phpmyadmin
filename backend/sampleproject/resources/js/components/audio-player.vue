@@ -11,5 +11,6 @@ export default {
     <span>Progress: {{ progress * 100 }}%</span> -->
     <v-btn @click="togglePlayback">{{ playing ? "Pause" : "Play" }}</v-btn>
     <v-btn @click="stop">Stop</v-btn>
+    <p>{{ duration }}</p>
   </div>
 </template>

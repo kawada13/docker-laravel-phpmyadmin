@@ -29,6 +29,7 @@
     "dependencies": {
         "@mdi/font": "^5.9.55",
         "vue-aplayer": "^1.6.1",
+        "vue-audio-better": "^3.0.1",
         "vue-howler": "^0.7.0",
         "vue-router": "^3.5.1"
     }
